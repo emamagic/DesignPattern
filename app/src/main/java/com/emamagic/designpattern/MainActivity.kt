@@ -46,8 +46,8 @@ class MainActivity : AppCompatActivity() {
 
         //////////////////////////////// Factory //////////////////////////////////////
 
-        val video: Video = MediaFactory.getMedia("Video" ,"video path" ,"video extension") as Video
-        val audio: Audio = MediaFactory.getMedia("Audio" ,"audio path" ,"audio extension") as Audio
+        val video: Video = MediaFactory.getMedia(Video::class.java ,"video path" ,"video extension") as Video
+        val audio: Audio = MediaFactory.getMedia(Audio::class.java ,"audio path" ,"audio extension") as Audio
 
         Log.e("FACTORY", "Media -> $video")
         Log.e("FACTORY", "Media -> $audio")
