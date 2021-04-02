@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.util.Log
 import com.emamagic.designpattern.creational.abstract_factory.AMediaFactory
 import com.emamagic.designpattern.creational.abstract_factory.audio.AAudio
-import com.emamagic.designpattern.creational.abstract_factory.audio.AudioFactory
 import com.emamagic.designpattern.creational.abstract_factory.video.AVideo
 import com.emamagic.designpattern.creational.abstract_factory.video.VideoFactory
 import com.emamagic.designpattern.creational.builder.Person
@@ -56,7 +55,7 @@ class MainActivity : AppCompatActivity() {
         //////////////////////////////// Abstract Factory //////////////////////////////////////
 
         val abstractVideo: AVideo = AMediaFactory.getMedia(VideoFactory("video path", "video extension")) as AVideo
-        val abstractAudio: AAudio = AMediaFactory.getMedia(AudioFactory("audio path", "audio extension")) as AAudio
+        val abstractAudio: AAudio = AMediaFactory.getMedia(AAudio("audio path", "audio extension")) as AAudio
 
         Log.e("ABSTRACT_FACTORY", "Media -> $abstractVideo")
         Log.e("ABSTRACT_FACTORY", "Media -> $abstractAudio")
