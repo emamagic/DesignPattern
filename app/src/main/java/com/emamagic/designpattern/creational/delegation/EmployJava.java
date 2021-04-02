@@ -1,7 +1,7 @@
-package com.emamagic.designpattern.delegation;
+package com.emamagic.designpattern.creational.delegation;
 
-import com.emamagic.designpattern.delegation.coder.WhoCanCode;
-import com.emamagic.designpattern.delegation.designer.WhoCanDesign;
+import com.emamagic.designpattern.creational.delegation.coder.WhoCanCode;
+import com.emamagic.designpattern.creational.delegation.designer.WhoCanDesign;
 
 public class EmployJava implements WhoCanDesign , WhoCanCode {
 

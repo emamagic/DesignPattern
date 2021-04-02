@@ -1,4 +1,4 @@
-package com.emamagic.designpattern.builder;
+package com.emamagic.designpattern.creational.builder;
 
 public class Person {
 

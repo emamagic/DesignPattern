@@ -1,4 +1,4 @@
-package com.emamagic.designpattern.factory;
+package com.emamagic.designpattern.creational.factory;
 
 public class MediaFactory {
 

@@ -1,29 +1,31 @@
-package com.emamagic.designpattern.factory;
+package com.emamagic.designpattern.creational.abstract_factory.audio;
 
-public class Video extends Media {
+import com.emamagic.designpattern.creational.abstract_factory.Media;
+
+public class AAudio extends Media {
 
     private String path;
     private String extension;
 
-    public Video(String path, String extension) {
+    public AAudio(String path, String extension) {
         this.path = path;
         this.extension = extension;
     }
 
     @Override
     public String path() {
-        return "Video path "+this.path;
+        return "Audio path "+this.path;
     }
 
 
     @Override
     public String extension() {
-        return "Video extension "+this.extension;
+        return "Audio extension "+this.extension;
     }
 
     @Override
     public String toString() {
-        return "Video{" +
+        return "Audio{" +
                 "path='" + path + '\'' +
                 ", extension='" + extension + '\'' +
                 '}';

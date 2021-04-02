@@ -1,4 +1,4 @@
-package com.emamagic.designpattern.delegation.designer;
+package com.emamagic.designpattern.creational.delegation.designer;
 
 import android.util.Log;
 
