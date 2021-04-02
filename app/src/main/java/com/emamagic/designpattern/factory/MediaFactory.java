@@ -2,13 +2,13 @@ package com.emamagic.designpattern.factory;
 
 public class MediaFactory {
 
-    public static Media getMedia(String type ,String path ,String time ,String extension) throws ClassNotFoundException {
+    public static Media getMedia(String type ,String path ,String extension) throws ClassNotFoundException {
         switch (type) {
             case "Video": {
-                return new Video(path, time, extension);
+                return new Video(path, extension);
             }
             case "Audio": {
-                return new Audio(path, time, extension);
+                return new Audio(path, extension);
             }
             default:{
                 throw new ClassNotFoundException();
