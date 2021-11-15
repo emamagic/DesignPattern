@@ -14,6 +14,9 @@ import com.emamagic.designpattern.creational.delegation.designer.Designer
 import com.emamagic.designpattern.creational.factory.Audio
 import com.emamagic.designpattern.creational.factory.MediaFactory
 import com.emamagic.designpattern.creational.factory.Video
+import com.emamagic.designpattern.creational.strategy.duck.CityDuck
+import com.emamagic.designpattern.creational.strategy.duck.CloudDuck
+import com.emamagic.designpattern.creational.strategy.duck.WildDuck
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +33,6 @@ class MainActivity : AppCompatActivity() {
         employ.code()
         employ.design()
 
-
         //////////////////////////////// Builder //////////////////////////////////////
 
         val person: Person = Person.Builder()
@@ -42,7 +44,6 @@ class MainActivity : AppCompatActivity() {
 
         Log.e("BUILDER", "Person -> $person")
 
-
         //////////////////////////////// Factory //////////////////////////////////////
 
         val video: Video = MediaFactory.getMedia(Video::class.java ,"video path" ,"video extension") as Video
@@ -50,7 +51,6 @@ class MainActivity : AppCompatActivity() {
 
         Log.e("FACTORY", "Media -> $video")
         Log.e("FACTORY", "Media -> $audio")
-
 
         //////////////////////////////// Abstract Factory //////////////////////////////////////
 
@@ -60,6 +60,14 @@ class MainActivity : AppCompatActivity() {
         Log.e("ABSTRACT_FACTORY", "Media -> $abstractVideo")
         Log.e("ABSTRACT_FACTORY", "Media -> $abstractAudio")
 
+        //////////////////////////////// Strategy //////////////////////////////////////
 
+        /**
+         * Define a family of algorithms, encapsulate each one, and make them interchangeable.
+         * The Strategy pattern let the algorithm very independently from clients that use it.
+         * */
+        val cityDuck = CityDuck()
+        val wildDuck = WildDuck()
+        val cloudDuck = CloudDuck()
     }
 }
